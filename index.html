@@ -1,0 +1,42 @@
+<html>
+<head> <title> Project 78 </title></head>
+
+<body>
+<h1> My Family Book </h1>
+<img src="https://image.shutterstock.com/image-vector/family-together-group-people-standing-260nw-590327120.jpg" id="family_fullimg">
+
+<h4 id="member_name"></h4>
+
+<button onclick="update();" style="text-align: center;"> Next </button>
+</body>
+
+<script>
+
+var Family_img= [ "https://image.shutterstock.com/image-vector/happy-old-grandfather-little-grandson-260nw-1782371876.jpg",
+"https://image.shutterstock.com/image-vector/little-boy-helps-grandmother-vector-260nw-759238489.jpg", 
+"https://image.shutterstock.com/image-vector/vector-father-son-flat-cartoon-260nw-291375758.jpg",
+"https://image.shutterstock.com/image-vector/mom-baby-260nw-187834304.jpg",
+"https://us.123rf.com/450wm/lenm/lenm1811/lenm181100003/111757476-illustration-of-twin-girls-hugging-each-other-and-wearing-the-same-clothes.jpg?ver=6"
+
+]
+var names= ["My Grandfather", "My Grandmother", "My Father", "My Mother", "Me and my sister"];
+
+var i = 0;
+function update() {
+    i++;
+    var family_member = 5 
+    if (i > family_member)
+    {
+        i = 0;
+    
+    }
+
+    var updatedimg= Family_img[i];
+    var updatedname= names[i];
+    document.getElementById("family_fullimg").src = updatedimg;
+    document.getElementById("member_name").innerHTML = updatedname;
+}
+
+</script>
+
+</html>
